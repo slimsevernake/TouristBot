@@ -1,0 +1,33 @@
+// GET all
+fetch('/city/').then(response => response.json().then(console.log))
+
+// GET one
+fetch('/city/1').then(response => response.json().then(console.log))
+
+// POST add new one
+fetch(
+    '/city',
+    {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            name: 'Москва',
+            information: 'Не забудьте посетить Красную Площадь. Ну а в ЦУМ можно и не заходить)))',
+            id: 1 })
+    }
+).then(result => result.json().then(console.log))
+
+// PUT save existing
+fetch(
+    '/city/1',
+    {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            name: 'Москва',
+            information: 'Не забудьте посетить Красную Площадь. Ну а в ЦУМ можно и не заходить))))))))))))))',
+            id: 1 })
+).then(result => result.json().then(console.log));
+
+// DELETE existing
+fetch('/city/1', { method: 'DELETE' }).then(result => console.log(result))
