@@ -11,9 +11,9 @@ fetch(
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-            name: 'Москва',
-            information: 'Не забудьте посетить Красную Площадь. Ну а в ЦУМ можно и не заходить)))',
-            id: 1 })
+            name: 'Питер',
+            information: 'Не забудьте посетить Эрмитаж)))',
+            id: 9 })
     }
 ).then(result => result.json().then(console.log))
 
@@ -25,7 +25,7 @@ fetch(
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
             name: 'Москва',
-            information: 'Не забудьте посетить Красную Площадь. Ну а в ЦУМ можно и не заходить))))))))))))))',
+            information: 'Не забудьте посетить Красную Площадь',
             id: 1 })
 ).then(result => result.json().then(console.log));
 
