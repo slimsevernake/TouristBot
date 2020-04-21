@@ -6,8 +6,6 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
 @RestController
 @RequestMapping("city")
 public class CityController {
@@ -25,8 +23,8 @@ public class CityController {
     }
 
     @GetMapping("{id}")
-    public City getOne(@PathVariable("id") City message) {
-        return message;
+    public City getOne(@PathVariable("id") City city) {
+        return city;
     }
 
     @PostMapping
@@ -36,12 +34,12 @@ public class CityController {
 
     @PutMapping("{id}")
     public City update(
-            @PathVariable("id") City messageFromDb,
+            @PathVariable("id") City cityFromDb,
             @RequestBody City city
     ) {
-        BeanUtils.copyProperties(city, messageFromDb, "id");
+        BeanUtils.copyProperties(city, cityFromDb, "id");
 
-        return cityRepo.save(messageFromDb);
+        return cityRepo.save(cityFromDb);
     }
 
     @DeleteMapping("{id}")

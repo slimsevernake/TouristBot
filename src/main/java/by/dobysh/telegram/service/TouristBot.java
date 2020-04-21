@@ -15,8 +15,6 @@ import org.telegram.telegrambots.meta.api.objects.Message;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
-import java.util.List;
-
 @Component
 @Log4j2
 @FieldDefaults(level = AccessLevel.PRIVATE)
@@ -53,8 +51,6 @@ public class TouristBot extends TelegramLongPollingBot {
 
     private String getInformation(String nameCity) {
         City city = cityRepo.findFirstByName(nameCity);
-//        List<City> cityList = cityRepo.findFirstByName(nameCity); // findByName(nameCity);
-//        return cityList.stream().findFirst().get().getInformation();           //.get(0).getInformation();
         return city.getInformation();
     }
 
