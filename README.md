@@ -11,6 +11,10 @@ Web приложение по управлению собственным тур
 
 Для сборки проекта: Maven.
 
+Для запуска необходимо изменить параметры (url, username, password) доступа MySQL DB в файле application.properties
+
+Token: 1217257255:AAEojOcsfYsZ1MgNjWaDQvB7iyF4CZu0IXc
+
 Бот доступен по ссылке t.me/MyTouristyBot
 
 Username: @MyTouristyBot
